@@ -2,9 +2,9 @@
 
 int main(){
     int i, j, aux;
-    int n = 10;
+    int n = 15;
     int vetor[10];
-    printf("Digite 10 numeros inteiros:\n");
+    printf("Digite as 10 notas de 0 a 10:\n");
     for(i = 0; i < n; i++){
         scanf("%d", &vetor[i]);
     }
@@ -19,18 +19,11 @@ int main(){
         }
     }
 
-    printf("Vetor ordenado em ordem crescente:\n");
-    for(i = 0; i < n; i++){
-        printf("%d, ", vetor[i]);
+    if(vetor[14] == 10){
+        printf("Otimo! Houve Clientes totalmente satsfeitos!\n");
     }
-    printf("%d %d", vetor[0], vetor[9]);
-    printf("\n");
-    printf("Vetor ordenado em ordem decrescente:\n");
-    for(i = n - 1; i >= 0; i--){
-        printf("%d, ", vetor[i]);   
+    else{
+        printf("Infelizmente nao houve clientes totalmente satisfeitos.\n");
     }
-    printf("%d %d", vetor[9], vetor[0]);
-    printf("\n");
-
     return 0;
 }
